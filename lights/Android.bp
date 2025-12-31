@@ -1,0 +1,14 @@
+cc_library_shared {
+    name: "lights." + TARGET_BOARD_PLATFORM,
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: ["lights.c"],
+    shared_libs: [
+        "liblog",
+        "libhardware",
+    ],
+    cflags: [
+        "-Wno-unused-parameter",
+    ],
+    init_rc: ["lights.rc"],
+}
